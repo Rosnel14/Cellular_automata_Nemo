@@ -1,0 +1,54 @@
+Learning Life Assignment - Response
+1. In what class does the program execution start.  How many "years"  (iterations) pass in this world?  How can you change the amount of time that elapses?
+
+  The world controller class runs the program execution. The world right now runs
+  for 3 generations and then stops.
+
+2. Describe the flow of execution of the program, where does it start?  Where does it go next? where does it end?
+
+  The program sets up all of the organisms then goes into a for loop
+  that iterates 3 times and allows evolutions and reproduction.
+  Afterwards, the program pauses and sets up the world with new conditions again.
+
+3. How would you change the color of the grass?
+
+  The grass' color is currently defined by the plant class,
+  so one would have to change the color there.
+
+4. Describe how grass reproduces.
+
+  Grass reproduces by adding a new grass object into the
+  creatures list and makes the grass generate a random x,y location
+
+5. How could you make sure the grass does not reproduce a new grass plant on top of an existing grass?
+
+  A simple if statement that checks the creatures list if a given position is open,
+  and if it is open a new organism can be placed there.
+
+6. How are the creatures stored and manipulated?
+
+  The complete list of creatures are stored in creatureList, an array list
+
+7. What is the point of the method purgeTheDead()?
+
+  purgeTheDead is a method that removes  dead creatures
+  from the creature list so that the list can contain only
+  creatures that are alive.
+
+8. Do the creatures have a location, or do locations have a creature?
+
+  The creature objects have locations as a part of the constructor,
+  so it would be a part of the creature.
+
+9. Does the world have creatures or do the creatures have a world?  Why is this necessary?
+
+  The creatures themselves have world objects associated with them. This is likely
+  necessary for means of placement for the creature objects, similar to the GCanvas.
+
+10. How would you make a creature move?  Describe what methods you would add and where you would put them?
+
+  First I would create a new class for this creature and then I would make a method similar
+  to the reproduce method for grass, except I would set the X and Y position of this
+  new creature rather than creating a new object altogether. This would only move it
+  in between evolutions if I place it in the same place as the reproduce method though, 
+  so it would likely have to be in a while loop during the exectution of the program.
