@@ -1,11 +1,10 @@
 package Cellular_automata_Nemo;
-import java.util.ArrayList;
 
-public class Grass extends Plant {
-	
-	public Grass(Location l, World w) {
+public class Herbivore extends Animal {
+	public Herbivore(Location l, World w) {
 		super(l,w);
-		myLifeSpan = 3;
+		myLifeSpan = 4;
+		//myColor = Color.blue;
 	}
 	
 	public void reproduce() {
@@ -13,7 +12,7 @@ public class Grass extends Plant {
 		int newX = (int)(Math.random()*20);
 		int newY = (int)(Math.random()*20); 
 		
-		myWorld.getCreatureList().add(new Grass(new Location(newX,newY), myWorld));
+		myWorld.getCreatureList().add(new Herbivore(new Location(newX,newY), myWorld));
 	}
 
 }

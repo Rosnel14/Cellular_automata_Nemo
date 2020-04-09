@@ -1,3 +1,4 @@
+package Cellular_automata_Nemo;
 
 public class Location {
 	
