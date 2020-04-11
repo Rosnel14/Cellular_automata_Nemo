@@ -9,3 +9,4 @@ I have doen the following:
 I made the following choices
 1 - the world has a creature list
 2 - each creature has a world
+![](nemo.gif)
