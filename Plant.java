@@ -1,4 +1,3 @@
-package Cellular_automata_Nemo;
 import java.awt.Color;
 
 public abstract class Plant extends LifeForm {
@@ -7,4 +6,5 @@ public abstract class Plant extends LifeForm {
 		super(loc, w);
 		myColor = Color.green;
 	}
+	
 }

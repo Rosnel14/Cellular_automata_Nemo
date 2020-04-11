@@ -1,4 +1,3 @@
-package Cellular_automata_Nemo;
 import java.awt.Color;
 
 import acm.graphics.*;
@@ -23,9 +22,9 @@ public class WorldController extends GraphicsProgram {
 	
 	public void setUpWorld(){
 		theWorld = new World(20,20);
-		theWorld.getCreatureList().add( new Grass( new Location(3,6), theWorld ));
-		theWorld.getCreatureList().add( new Grass( new Location(4,6), theWorld ));
-		theWorld.getCreatureList().add( new Herbivore(new Location(5,7), theWorld ));
+		theWorld.getCreatureList().add( new Phytoplankton( new Location(3,6), theWorld ));
+		theWorld.getCreatureList().add( new Phytoplankton( new Location(4,6), theWorld ));
+		theWorld.getCreatureList().add( new Jacques(new Location(5,7), theWorld ));
 		theWorldCanvas = this.getGCanvas();
 	}
 	

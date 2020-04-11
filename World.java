@@ -1,4 +1,4 @@
-package Cellular_automata_Nemo;
+import java.awt.Color;
 import java.util.ArrayList;
 
 public class World {
@@ -17,9 +17,22 @@ public class World {
 	public void letTimePass(){
 		
 		makeNewCreatures();
-		//eatThings();
-		//creaturesGetOlder();
-		//purgeTheDead();		
+		eatThings();
+		creaturesGetOlder();
+		purgeTheDead();		
+	}
+	public void eatThings() {
+		
+		//I'm almost there but I'm stuck right now 4/11 
+		int currentSizeOfCreatureList = creatureList.size();
+		Location comparison;
+		for (int i=0; i< currentSizeOfCreatureList; i++) {
+			if (creatureList.get(i).getMyColor() == Color.PINK) {
+				comparison = creatureList.get(i).getMyLocation();
+				for(int k = 0; k<currentSizeOfCreatureList; k++) {			
+				}
+			}
+		}
 	}
 	
 	public void makeNewCreatures() {
