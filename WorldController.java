@@ -23,8 +23,10 @@ public class WorldController extends GraphicsProgram {
 	public void setUpWorld(){
 		theWorld = new World(20,20);
 		theWorld.getCreatureList().add( new Phytoplankton( new Location(3,6), theWorld ));
-		theWorld.getCreatureList().add( new Phytoplankton( new Location(4,6), theWorld ));
-		theWorld.getCreatureList().add( new Jacques(new Location(5,7), theWorld ));
+		theWorld.getCreatureList().add( new Phytoplankton( new Location(5,9), theWorld ));
+		theWorld.getCreatureList().add( new Phytoplankton( new Location(2,1), theWorld ));
+		theWorld.getCreatureList().add( new Jacques(new Location(2,6), theWorld ));
+		theWorld.getCreatureList().add( new Jacques(new Location(4,8), theWorld ));
 		theWorldCanvas = this.getGCanvas();
 	}
 	
@@ -47,7 +49,7 @@ public class WorldController extends GraphicsProgram {
 		for(int row = 0 ; row<theWorld.getWidth(); row++)
 			for(int col=0; col<theWorld.getHeight(); col++){
 				GRect r = new GRect(row*10, col*10, 10, 10);
-				r.setFillColor(Color.WHITE);
+				r.setFillColor(Color.CYAN);
 				r.setFilled(true);
 				theWorldCanvas.add(r);
 			}
