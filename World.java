@@ -17,46 +17,51 @@ public class World {
 	public void letTimePass(){
 		
 		makeNewCreatures();
-		//eatThings();
-		creaturesGetOlder();
-		purgeTheDead();		
+		eatThings();
+		//creaturesGetOlder();
+		//purgeTheDead();		
 	}
 	public void eatThings() {
 		
-		//I'm almost there but I'm stuck right now 4/11 
+		
 		int currentSizeOfCreatureList = creatureList.size();
 		Location comparison;
-		for (int i=0; i< currentSizeOfCreatureList; i++) {
+		for (int i=currentSizeOfCreatureList-1; i > 0; i--) {
+			System.out.println(creatureList.get(i).getMyColor());
 			if (creatureList.get(i).getMyColor() == Color.PINK) {
 				comparison = creatureList.get(i).getMyLocation();
-				for(int k = 0; k<currentSizeOfCreatureList; k++) {	
-					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()-1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getY() == comparison.getY()+1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getY() == comparison.getY()-1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()+1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()-1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()-1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()+1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()-1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()-1 && creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
+				for(int k=currentSizeOfCreatureList-1; k > 0; k--) {	
+					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyLocation().getY() == comparison.getY() && creatureList.get(k).getMyColor() == Color.green) {
+						this.creatureList.remove(creatureList.get(k));
 					}
 				}
 			}
 		}
+//					}
+//					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()-1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//					if(creatureList.get(k).getMyLocation().getY() == comparison.getY()+1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//					if(creatureList.get(k).getMyLocation().getY() == comparison.getY()-1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()+1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()-1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()-1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()+1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()-1 && creatureList.get(k).getMyLocation().getY() == comparison.getY()-1 && creatureList.get(k).getMyColor() == Color.green) {
+//						creatureList.remove(k);
+//					}
+//				}
+//			}
+//		}
 	}
 	
 	public void makeNewCreatures() {
@@ -66,6 +71,7 @@ public class World {
 		for(int i=0; i< currentSizeOfCreatureList; i++) {
 			creatureList.get(i).reproduce();
 		}
+		System.out.println("End of reproduce");
 	}
 	
 	public void purgeTheDead(){

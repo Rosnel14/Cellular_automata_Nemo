@@ -21,12 +21,9 @@ public class WorldController extends GraphicsProgram {
 	}
 	
 	public void setUpWorld(){
-		theWorld = new World(20,20);
-		theWorld.getCreatureList().add( new Phytoplankton( new Location(3,6), theWorld ));
-		theWorld.getCreatureList().add( new Phytoplankton( new Location(5,9), theWorld ));
-		theWorld.getCreatureList().add( new Phytoplankton( new Location(2,1), theWorld ));
-		theWorld.getCreatureList().add( new Jacques(new Location(2,6), theWorld ));
+		theWorld = new World(50,50);
 		theWorld.getCreatureList().add( new Jacques(new Location(4,8), theWorld ));
+		theWorld.getCreatureList().add(new Phytoplankton(new Location(5,8), theWorld));
 		theWorldCanvas = this.getGCanvas();
 	}
 	
