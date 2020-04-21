@@ -1,3 +1,4 @@
+package Cellular_automata_Nemo.Cellular_automata_Nemo;
 import java.awt.Color;
 
 
@@ -24,6 +25,7 @@ public class Jacques extends Animal {
 				comparison = myWorld.getCreatureList().get(i).getMyLocation();
 				for(int k = 0; k<currentSizeOfCreatureList; k++) {	
 					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
+<<<<<<< HEAD
 						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX()-2,comparison.getY()-2), myWorld ));
 					}
 					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
@@ -40,6 +42,24 @@ public class Jacques extends Animal {
 					}
 					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
 						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX(),6), myWorld ));
+=======
+						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
+					}
+					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
+						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
+					}
+					if(myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
+						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
+					}
+					if(myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
+						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
+					}
+					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
+						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
+					}
+					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
+						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
+>>>>>>> b84c83777ab9421f43f4ad086121c07ef0f193f9
 					}
 					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.PINK) {
 						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
