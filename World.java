@@ -26,13 +26,12 @@ public class World {
 		
 		int currentSizeOfCreatureList = creatureList.size();
 		Location comparison;
-		for (int i=currentSizeOfCreatureList-1; i > 0; i--) {
-			System.out.println(creatureList.get(i).getMyColor());
-			if (creatureList.get(i).getMyColor() == Color.PINK) {
+		for (int i=currentSizeOfCreatureList-1; i >= 0; i--) {
+			if (creatureList.get(i).getMyLifeSpan() == 4) {
 				comparison = creatureList.get(i).getMyLocation();
-				for(int k=currentSizeOfCreatureList-1; k > 0; k--) {	
+				for(int k=currentSizeOfCreatureList-1; k >= 0; k--) {
 					if(creatureList.get(k).getMyLocation().getX() == comparison.getX()+1 && creatureList.get(k).getMyLocation().getY() == comparison.getY() && creatureList.get(k).getMyColor() == Color.green) {
-						this.creatureList.remove(creatureList.get(k));
+						creatureList.remove(k);
 					}
 				}
 			}
