@@ -60,5 +60,4 @@ public class WorldController extends GraphicsProgram {
 			theWorldCanvas.add(r);
 		}
 	}
-	//Carter
 }
