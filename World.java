@@ -23,11 +23,194 @@ public class World {
 	}
 
 	public void eatThings() {
-
+		JacqueEat();
+		MarlinEat();
+		ChumEat();
+		BruceEat();
+		
+		
+	}
+	
+	public void BruceEat() {
 		int currentSizeOfCreatureList = creatureList.size();
 		Location comparison;
 		for (int i = currentSizeOfCreatureList - 1; i >= 0; i--) {
-			if (creatureList.get(i).getMyLifeSpan() == 4) {
+			if (creatureList.get(i).getMyColor() == Color.lightGray) {
+				comparison = creatureList.get(i).getMyLocation();
+				for (int k = currentSizeOfCreatureList - 1; k >= 0; k--) {
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE || creatureList.get(k).getMyColor() == Color.blue) {
+						creatureList.remove(k);
+					}
+				}
+			}
+		}
+
+	}
+	
+	public void ChumEat() {
+		int currentSizeOfCreatureList = creatureList.size();
+		Location comparison;
+		for (int i = currentSizeOfCreatureList - 1; i >= 0; i--) {
+			if (creatureList.get(i).getMyColor() == Color.blue) {
+				comparison = creatureList.get(i).getMyLocation();
+				for (int k = currentSizeOfCreatureList - 1; k >= 0; k--) {
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyColor() == Color.ORANGE ) {
+						creatureList.remove(k);
+					}
+				}
+			}
+		}
+
+	}
+	
+	public void MarlinEat() {
+		int currentSizeOfCreatureList = creatureList.size();
+		Location comparison;
+		for (int i = currentSizeOfCreatureList - 1; i >= 0; i--) {
+			if (creatureList.get(i).getMyColor() == Color.ORANGE) {
+				comparison = creatureList.get(i).getMyLocation();
+				for (int k = currentSizeOfCreatureList - 1; k >= 0; k--) {
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyColor() == Color.green || creatureList.get(k).getMyColor() == Color.PINK) {
+						creatureList.remove(k);
+					}
+				}
+			}
+		}
+
+
+	}
+	
+	public void JacqueEat() {
+		int currentSizeOfCreatureList = creatureList.size();
+		Location comparison;
+		for (int i = currentSizeOfCreatureList - 1; i >= 0; i--) {
+			if (creatureList.get(i).getMyColor() == Color.PINK) {
 				comparison = creatureList.get(i).getMyLocation();
 				for (int k = currentSizeOfCreatureList - 1; k >= 0; k--) {
 					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() + 1
@@ -36,18 +219,22 @@ public class World {
 						creatureList.remove(k);
 					}
 					if (creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
+							&& creatureList.get(k).getMyLocation().getY() == comparison.getY()
 							&& creatureList.get(k).getMyColor() == Color.green) {
 						creatureList.remove(k);
 					}
 					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
-							&& creatureList.get(k).getMyColor() == Color.green) {
-						creatureList.remove(k);
-					}
-					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() + 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
 							&& creatureList.get(k).getMyColor() == Color.green) {
 						creatureList.remove(k);
 					}
 					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX()
+							&& creatureList.get(k).getMyColor() == Color.green) {
+						creatureList.remove(k);
+					}
+					if (creatureList.get(k).getMyLocation().getY() == comparison.getY() - 1
+							&& creatureList.get(k).getMyLocation().getX() == comparison.getX() - 1
 							&& creatureList.get(k).getMyColor() == Color.green) {
 						creatureList.remove(k);
 					}
