@@ -38,4 +38,8 @@ public class Jacques extends Animal {
 			}
 		}
 	}
+	public void move() {
+		this.myLocation.setX(this.myLocation.getX()+1);
+		this.myLocation.setY(this.myLocation.getY()+1);
+	}
 }

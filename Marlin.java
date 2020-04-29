@@ -34,5 +34,9 @@ public class Marlin extends Animal {
 			}
 		}
 	}
+	public void move() {
+		this.myLocation.setX(this.myLocation.getX()+2);
+		this.myLocation.setY(this.myLocation.getY()+2);
+	}
 
 }

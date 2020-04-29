@@ -16,5 +16,7 @@ public class Phytoplankton extends Plant {
 
 		myWorld.getCreatureList().add(new Phytoplankton(new Location(newX, newY), myWorld));
 	}
-
+	public void move() {
+		
+	}
 }

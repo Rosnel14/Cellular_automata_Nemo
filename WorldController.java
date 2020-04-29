@@ -11,8 +11,8 @@ public class WorldController extends GraphicsProgram {
 	private static final long serialVersionUID = 1L;
 	private World theWorld;
 	private GCanvas theWorldCanvas;
-	public static final int APPLICATION_WIDTH = 200;
-	public static final int APPLICATION_HEIGHT = 200;
+	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_HEIGHT = 500;
 
 	public void run() {
 		setUpWorld();
@@ -25,27 +25,27 @@ public class WorldController extends GraphicsProgram {
 	}
 
 	public void setUpWorld() {
-		theWorld = new World(20, 20);
-		theWorld.getCreatureList().add(new Bruce(new Location(8, 2), theWorld));
-		System.out.println("b1");
-		theWorld.getCreatureList().add(new Bruce(new Location(7, 2), theWorld));
-		System.out.println("b2");
-		theWorld.getCreatureList().add(new Bruce(new Location(3, 5), theWorld));
-		System.out.println("b3");
-		theWorld.getCreatureList().add(new Marlin(new Location(4, 5), theWorld));
-		System.out.println("m1");
-		theWorld.getCreatureList().add(new Phytoplankton(new Location(5, 5), theWorld));
-		System.out.println("p1");
-		theWorld.getCreatureList().add(new Phytoplankton(new Location(3, 3), theWorld));
-		System.out.println("p1");
-		theWorld.getCreatureList().add(new Jacques(new Location(2, 1), theWorld));
-		System.out.println("j1");
-		theWorld.getCreatureList().add(new Jacques(new Location(3, 9), theWorld));
-		System.out.println("j1");
-		theWorld.getCreatureList().add(new Jacques(new Location(13, 12), theWorld));
-		System.out.println("j1");
-//		theWorld.getCreatureList().add( new Jacques(new Location(4,2), theWorld ));
+		theWorld = new World(50, 50);
+//		theWorld.getCreatureList().add(new Bruce(new Location(8, 2), theWorld));
+//		System.out.println("b1");
+//		theWorld.getCreatureList().add(new Bruce(new Location(7, 2), theWorld));
+//		System.out.println("b2");
+//		theWorld.getCreatureList().add(new Bruce(new Location(3, 5), theWorld));
+//		System.out.println("b3");
+//		theWorld.getCreatureList().add(new Marlin(new Location(4, 5), theWorld));
+//		System.out.println("m1");
+//		theWorld.getCreatureList().add(new Phytoplankton(new Location(5, 5), theWorld));
+//		System.out.println("p1");
+//		theWorld.getCreatureList().add(new Phytoplankton(new Location(3, 3), theWorld));
+//		System.out.println("p1");
+//		theWorld.getCreatureList().add(new Jacques(new Location(2, 1), theWorld));
 //		System.out.println("j1");
+//		theWorld.getCreatureList().add(new Jacques(new Location(3, 9), theWorld));
+//		System.out.println("j1");
+//		theWorld.getCreatureList().add(new Jacques(new Location(13, 12), theWorld));
+//		System.out.println("j1");
+////		theWorld.getCreatureList().add( new Jacques(new Location(4,2), theWorld ));
+////		System.out.println("j1");
 		theWorld.getCreatureList().add(new Chum(new Location(5, 13), theWorld));
 		System.out.println("c1");
 //		theWorld.getCreatureList().add( new Chum(new Location(10,3), theWorld ));

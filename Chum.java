@@ -34,5 +34,8 @@ public class Chum extends Animal {
 			}
 		}
 	}
-
+	public void move() {
+		this.myLocation.setX(this.myLocation.getX()+3);
+		this.myLocation.setY(this.myLocation.getY()+3);
+	}
 }

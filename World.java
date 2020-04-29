@@ -19,6 +19,7 @@ public class World {
 		makeNewCreatures();
 		System.out.println("make creatures");
 		eatThings();
+		moveCreatures();
 		System.out.println("eat things ");
 		creaturesGetOlder();
 		System.out.println("get older ");
@@ -35,6 +36,15 @@ public class World {
 		BruceEat();
 		
 
+	}
+	
+	public void moveCreatures() {
+		int currentSizeOfCreatureList = creatureList.size();
+		System.out.println("size of list is " + currentSizeOfCreatureList);
+		for (int i = 0; i < currentSizeOfCreatureList; i++) {
+			creatureList.get(i).move();
+		}
+		System.out.println("End of movement");
 	}
 
 	public void BruceEat() {

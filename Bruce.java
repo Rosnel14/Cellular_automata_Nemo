@@ -38,5 +38,9 @@ public class Bruce extends Animal {
 			}
 		}
 	}
+	public void move() {
+		this.myLocation.setX(this.myLocation.getX()+5);
+		this.myLocation.setY(this.myLocation.getY()+5);
+	}
 
 }

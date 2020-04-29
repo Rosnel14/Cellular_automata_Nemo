@@ -84,5 +84,6 @@ public abstract class LifeForm {
 		return "LifeForm [myLifeSpan=" + myLifeSpan + ", myLocation="
 				+ myLocation + ", myColor=" + myColor + "]";
 	}
+	protected abstract void move();
 	
 }
