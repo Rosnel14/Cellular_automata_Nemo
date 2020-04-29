@@ -13,6 +13,7 @@ public class Marlin extends Animal {
 		super(loc, w);
 		// TODO Auto-generated constructor stub
 		myColor = Color.ORANGE;
+		myLifeSpan = 5;
 	}
 
 	@Override
@@ -23,35 +24,15 @@ public class Marlin extends Animal {
 			if (myWorld.getCreatureList().get(i).getMyColor() == Color.ORANGE) {
 				comparison = myWorld.getCreatureList().get(i).getMyLocation();
 				for(int k = 0; k<currentSizeOfCreatureList; k++) {	
-					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX()-2,comparison.getY()-2), myWorld ));
+					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY() && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
+						myWorld.getCreatureList().add( new Marlin(new Location(comparison.getX()-2,comparison.getY()-2), myWorld ));
 					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX()+2,comparison.getY()+2), myWorld ));
-					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX()-2,comparison.getY()), myWorld ));
-					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX()+2,comparison.getY()), myWorld ));
-					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX()+2,comparison.getY()), myWorld ));
-					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()+1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(comparison.getX(),6), myWorld ));
-					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()+1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
-					}
-					if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY()-1 && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
-						myWorld.getCreatureList().add( new Jacques(new Location(2,6), myWorld ));
-					}
+						if(myWorld.getCreatureList().get(k).getMyLocation().getX() == comparison.getX()-1 && myWorld.getCreatureList().get(k).getMyLocation().getY() == comparison.getY() && myWorld.getCreatureList().get(k).getMyColor() == Color.ORANGE) {
+							myWorld.getCreatureList().add( new Marlin(new Location(comparison.getX()+2,comparison.getY()+2), myWorld ));
+						}
 				}
 			}
 		}
 	}
-
-
 
 }
