@@ -11,8 +11,8 @@ public class Phytoplankton extends Plant {
 	}
 
 	public void reproduce() {
-		int newX = (int) (Math.random() * 20);
-		int newY = (int) (Math.random() * 20);
+		int newX = (int) (Math.random() * 100);
+		int newY = (int) (Math.random() * 100);
 
 		myWorld.getCreatureList().add(new Phytoplankton(new Location(newX, newY), myWorld));
 	}

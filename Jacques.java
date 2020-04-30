@@ -11,7 +11,7 @@ import java.awt.Color;
 public class Jacques extends Animal {
 	public Jacques(Location l, World w) {
 		super(l, w);
-		myLifeSpan = 4;
+		myLifeSpan = 7;
 		myColor = Color.PINK;
 	}
 
@@ -39,7 +39,14 @@ public class Jacques extends Animal {
 		}
 	}
 	public void move() {
-		this.myLocation.setX(this.myLocation.getX()+1);
-		this.myLocation.setY(this.myLocation.getY()+1);
+		if (this.getMyLocation().getX() >= 50 || this.getMyLocation().getY() >= 50) {
+			this.myLocation.setX(this.myLocation.getX()-1);
+			this.myLocation.setY(this.myLocation.getY()+1);	
+		} else if (this.getMyLocation().getX() <= 0 || this.getMyLocation().getY() <= 0) {
+			this.myLocation.setX(this.myLocation.getX()+1);
+		} else {
+			this.myLocation.setX(this.myLocation.getX()+1);
+			this.myLocation.setY(this.myLocation.getY()-1);
+		}
 	}
 }

@@ -11,7 +11,7 @@ import java.awt.Color;
 public class Bruce extends Animal {
 	public Bruce(Location l, World w) {
 		super(l, w);
-		myLifeSpan = 10;
+		myLifeSpan = 15;
 		myColor = Color.lightGray;
 	}
 
@@ -39,8 +39,17 @@ public class Bruce extends Animal {
 		}
 	}
 	public void move() {
-		this.myLocation.setX(this.myLocation.getX()+5);
-		this.myLocation.setY(this.myLocation.getY()+5);
+		if (this.getMyLocation().getX() > 50 || this.getMyLocation().getY() > 50) {
+			this.myLocation.setX(this.myLocation.getX()-5);
+			this.myLocation.setY(this.myLocation.getY()+5);	
+		} else if (this.getMyLocation().getX() < 0 || this.getMyLocation().getY() < 0) {
+			this.myLocation.setX(this.myLocation.getX()+5);
+		} else {
+			this.myLocation.setX(this.myLocation.getX()+5);
+			this.myLocation.setY(this.myLocation.getY()+5);
+		}
+		
+		
 	}
 
 }

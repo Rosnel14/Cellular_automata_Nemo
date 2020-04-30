@@ -13,7 +13,7 @@ public class Chum extends Animal {
 		super(loc, w);
 		// TODO Auto-generated constructor stub
 		myColor = Color.blue;
-		myLifeSpan = 7;
+		myLifeSpan = 11;
 	}
 
 	@Override
@@ -35,7 +35,14 @@ public class Chum extends Animal {
 		}
 	}
 	public void move() {
-		this.myLocation.setX(this.myLocation.getX()+3);
-		this.myLocation.setY(this.myLocation.getY()+3);
+		if (this.getMyLocation().getX() >= 50 || this.getMyLocation().getY() >= 50) {
+			this.myLocation.setX(this.myLocation.getX()-3);
+			this.myLocation.setY(this.myLocation.getY()+3);	
+		} else if (this.getMyLocation().getX() <= 0 || this.getMyLocation().getY() <= 0) {
+			this.myLocation.setX(this.myLocation.getX()+3);
+		} else {
+			this.myLocation.setX(this.myLocation.getX()-3);
+			this.myLocation.setY(this.myLocation.getY()+3);
+		}
 	}
 }
