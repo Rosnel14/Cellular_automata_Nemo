@@ -10,3 +10,8 @@ I made the following choices
 1 - the world has a creature list
 2 - each creature has a world
 ![](nemo.gif)
+
+
+# Current State 4/30 
+The ecosystem is mostly unstable, because the plants keep taking over! 
+![](dory.gif)
